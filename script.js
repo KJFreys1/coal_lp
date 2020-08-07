@@ -1,22 +1,23 @@
 /* DOM Manipulation */
 
 //Carousel Circle Elements
-const cir1 = document.querySelector("#c1")
-const cir2 = document.querySelector("#c2")
-const cir3 = document.querySelector("#c3")
-const cir4 = document.querySelector("#c4")
+// const cir1 = document.querySelector("#c1")
+const cir1 = $("#c1")
+const cir2 = $("#c2")
+const cir3 = $("#c3")
+const cir4 = $("#c4")
 
 //Mountain Nav Elements
-const mnt1 = document.querySelector("#mnt1")
-const mnt2 = document.querySelector("#mnt2")
+const mnt1 = $("#mnt1")
+const mnt2 = $("#mnt2")
 
 //Section Backgrounds
-const one = document.querySelector("#one")
-const two = document.querySelector("#two")
+const one = $("#one")
+const two = $("#two")
 
 //Content
-const tc_1 = document.querySelector("#tc-1")
-const tc_2 = document.querySelector("#tc-2")
+const tc_1 = $("#tc-1")
+const tc_2 = $("#tc-2")
 
 /* ---------------------------------------------- */
 
@@ -25,56 +26,56 @@ let circles = [cir1, cir2, cir3, cir4]
 let cirHighlight = 0
 
 function setImageOne() {
-    one.style.backgroundImage = 'url("images/coal-bg01.jpg")'
+    one.css("background-image", "url('images/coal-bg01.jpg')")
 }
 
 function setImageTwo() {
-    one.style.backgroundImage = 'url("images/coal-bg04.jpg")'
+    one.css("background-image", "url('images/coal-bg04.jpg')")
 }
 
 function setHighlight(idx) {
     if (cirHighlight != idx) {
-        circles[cirHighlight].style.backgroundColor = "gray"
-        circles[idx].style.backgroundColor = "white"
+        circles[cirHighlight].css("background-color", "gray")
+        circles[idx].css("background-color", "white")
         cirHighlight = idx
     }
 }
 
-cir1.addEventListener("click", () => {
+cir1.click(() => {
     setImageOne()
     setHighlight(0)
 })
-cir2.addEventListener("click", () => {
+cir2.click(() => {
     setImageTwo()
     setHighlight(1)
 })
-cir3.addEventListener("click", () => {
+cir3.click(() => {
     setImageOne()
     setHighlight(2)
 })
-cir4.addEventListener("click", () => {
+cir4.click(() => {
     setImageTwo()
     setHighlight(3)
 })
 
-document.querySelector("#i1").addEventListener("click", () => {
+$("#i1").click(() => {
     setImageOne()
     setHighlight(0)
 })
-document.querySelector("#i2").addEventListener("click", () => {
+$("#i2").click(() => {
     setImageTwo()
     setHighlight(1)
 })
-document.querySelector("#i3").addEventListener("click", () => {
+$("#i3").click(() => {
     setImageOne()
     setHighlight(2)
 })
-document.querySelector("#i4").addEventListener("click", () => {
+$("#i4").click(() => {
     setImageTwo()
     setHighlight(3)
 })
 
-cir1.style.backgroundColor = "white"
+cir1.css("background-color", "white")
 
 /* ---------------------------------------------- */
 
@@ -84,35 +85,34 @@ let mntHighlight = 0
 
 function setMountain(idx) {
     if (mntHighlight != idx) {
-        mountains[mntHighlight].style.backgroundColor = "rgb(16, 42, 80)"
-        mountains[mntHighlight].style.color = "lightgray"
-        mountains[idx].style.backgroundColor = "lightgray"
-        mountains[idx].style.color = "rgb(16, 42, 80)"
+        mountains[mntHighlight].css("background-color", "rgb(16, 42, 80)")
+        mountains[mntHighlight].css("color", "lightgray")
+        mountains[idx].css("background-color", "lightgray")
+        mountains[idx].css("color", "rgb(16, 42, 80)")
         mntHighlight = idx
     }
 }
 
 function setContent() {
     if (mntHighlight == 0) {
-        two.style.backgroundImage = 'url("images/coal-bg04.jpg")'
-        tc_1.style.display = "block"
-        tc_2.style.display = "none"
+        two.css("background-image", "url('images/coal-bg04.jpg')")
+        tc_1.css("display", "block")
+        tc_2.css("display", "none")
     } else {
-        two.style.backgroundImage = 'url("images/coal-bg01.jpg")'
-        tc_2.style.display = "block"
-        tc_1.style.display = "none"
+        two.css("background-image", "url('images/coal-bg01.jpg')")
+        tc_1.css("display", "none")
+        tc_2.css("display", "block")
     }
 }
 
-mnt1.addEventListener("click", () => {
+mnt1.click(() => {
     setMountain(0)
     setContent()
 })
-
-mnt2.addEventListener("click", () => {
+mnt2.click(() => {
     setMountain(1)
     setContent()
 })
 
-tc_1.style.display = "show"
-tc_2.style.display = "none"
+tc_1.css("display", "block")
+tc_2.css("display", "none")
