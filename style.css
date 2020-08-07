@@ -1,0 +1,241 @@
+@media only screen and (max-width: 600px) {
+    .carousel {
+        display: none;
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+ 
+#zero {
+    height: 600px;
+    background-image: url("images/coal-bg03.jpg");
+    background-position-y: center;
+ }
+
+#one {
+    position: relative;
+    height: 600px;
+    background-image: url("images/coal-bg01.jpg");
+}
+
+#two {
+    position: relative;
+    height: 600px;
+    background-image: url("images/coal-bg04.jpg");
+    background-position-y: center;
+}
+
+.wrapper {
+    width: 60vw;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    border-radius: 100%;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    margin: auto 10px;
+}
+
+.logo-name {
+    line-height: 100%;
+}
+
+.spacer {
+    visibility: hidden;
+    flex-grow: 1;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.link {
+    list-style: none;
+    margin: auto 10px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(16, 42, 80);
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.big-num {
+    font-size: 100px;
+    margin: 0;
+    padding: 0;
+    color: rgba(167, 167, 167, 0.705);
+}
+
+.history {
+    position: relative;
+    font-size: 30px;
+    bottom: 85px;
+    left: 95px;
+    margin: 0;
+}
+
+.climb {
+    position: relative;
+    font-size: 30px;
+    bottom: 85px;
+    left: 125px;
+    margin: 0;
+}
+
+#one p {
+    margin: -60px 0 0 50px;
+}
+
+#two-desc div {
+    padding: 0 20px;
+}
+
+.p-wrap {
+    margin: -195px 0 0 200px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    background-color: rgb(16, 42, 80);
+    opacity: 90%;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.car-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.car-img-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.car-circle-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    height: 8px;
+    width: 8px;
+    background-color: gray;
+    border-radius: 100%;
+    margin: 5px 3px -10px 3px;
+}
+
+.circle:hover {
+    cursor: pointer;
+}
+
+.car-img {
+    height: 120px;
+    width: 180px;
+    margin: 0 5px;
+}
+
+.car-img:hover {
+    cursor: pointer;
+}
+
+.two-nav {
+    background-color: rgb(16, 42, 80);
+}
+
+.nav-mnt {
+    padding: 5px 15px;
+}
+
+#mnt1 {
+    background-color: lightgray;
+    color: rgb(16, 42, 80);
+}
+
+#mnt1:hover {
+    cursor: pointer;
+}
+
+#mnt2 {
+    background-color: rgb(16, 42, 80);
+    color: lightgray;
+}
+
+#mnt2:hover {
+    cursor: pointer;
+}
+
+.nav-mnt h2 {
+    margin: 0 auto;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.two-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 100px 25px;
+    padding: 10px 30px;
+    width: fit-content;
+}
+
+.two-content h1 {
+    margin: 0 0 5px 0;
+}
+
+tr {
+    height: 25px;
+}
+
+td {
+    width: 125px;
+}
+
+.two-foot {
+    background-color: rgb(16, 42, 80);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.foot-wrap {
+    display: flex;
+}
+
+.foot-wrap * {
+    color: lightgray;
+    opacity: 50%;
+}
+
+.copyright {
+    margin: auto;
+}
