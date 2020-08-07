@@ -1,7 +1,7 @@
 /* DOM Manipulation */
+/* jQuery */
 
 //Carousel Circle Elements
-// const cir1 = document.querySelector("#c1")
 const cir1 = $("#c1")
 const cir2 = $("#c2")
 const cir3 = $("#c3")
@@ -22,6 +22,7 @@ const tc_2 = $("#tc-2")
 /* ---------------------------------------------- */
 
 // Handle Carousel Functionality
+
 let circles = [cir1, cir2, cir3, cir4]
 let cirHighlight = 0
 
@@ -80,6 +81,7 @@ cir1.css("background-color", "white")
 /* ---------------------------------------------- */
 
 // Handle Mountains Functionality
+
 let mountains = [mnt1, mnt2]
 let mntHighlight = 0
 
@@ -116,3 +118,16 @@ mnt2.click(() => {
 
 tc_1.css("display", "block")
 tc_2.css("display", "none")
+
+/* ---------------------------------------------- */
+
+// Scroll Transition
+
+$(".nav a").on("click", function(e) {
+    if (this.hash) {
+        e.preventDefault()
+        $("html, body").animate({
+            scrollTop: $(this.hash).offset().top
+        }, 800)
+    }
+})
