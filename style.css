@@ -1,10 +1,8 @@
-@media only screen and (max-width: 600px) {
-    .carousel {
-        display: none;
-    }
+* {
+    box-sizing: border-box;
 }
 
-body {
+body, html {
     padding: 0;
     margin: 0;
     font-family: 'Oswald', sans-serif;
@@ -84,6 +82,17 @@ a {
 
 .link:hover {
     cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+}
+
+.ham-line {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .main-title {
@@ -178,6 +187,7 @@ a {
     height: 120px;
     width: 180px;
     margin: 0 5px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .car-img:hover {
@@ -262,4 +272,85 @@ td {
 .copyright a:hover {
     cursor: pointer;
     color: white;
+}
+
+@media only screen and (max-width: 700px) {
+    body, html {
+        overflow-x: hidden;
+    }
+
+    #zero {
+        padding-top: 10px;
+    }
+
+    .nav-active {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        transition: transform .5s ease;
+    }
+
+    .i-active {
+        transform: rotate(90deg);
+    }
+
+    /* .carousel {
+        display: none;
+    } */
+
+    .car-img {
+        height: 15vw;
+        width: 20vw;
+        margin: 0 1.5vw 2vh 1.5vw;
+    }
+
+    .main-title {
+        margin: 5px auto;
+    }
+
+    .main-title h1 {
+        line-height: 120%;
+        font-size: 12vw;
+    }
+
+    #one .big-num {
+        padding-left: 20px;
+    }
+
+    #one p {
+        width: 80%;
+    }
+
+    .history {
+        left: 115px;
+    }
+
+    .p-wrap {
+        height: auto;
+        margin: -70px 0 20px 0;
+    }
+
+    .copyright {
+        font-size: 15px;
+        margin: auto 10px;
+    }
+
+    .wrapper {
+        width: 100vw;
+    }
+}
+
+@keyframes navLinkFade{
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
 }

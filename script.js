@@ -131,3 +131,16 @@ $(".nav a").on("click", function(e) {
         }, 800)
     }
 })
+
+/* ---------------------------------------------- */
+
+// Hamburger Menu
+
+const nav = document.querySelector(".nav-links")
+const icon = document.querySelector(".hamburger")
+
+icon.addEventListener("click", () => {
+    nav.classList.toggle("nav-active")
+    nav.style.animation = "navLinkFade .5s ease forwards"
+    icon.classList.toggle("i-active")
+})
